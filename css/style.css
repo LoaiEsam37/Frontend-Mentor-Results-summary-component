@@ -1,0 +1,233 @@
+:root {
+    --White: white;
+    --dark-purple: #322deb;
+    --light-purple: #6542fe;
+    --score-background-color: linear-gradient(0deg, #4734f0, #4c23ca);
+    --result-background-color: linear-gradient(180deg, var(--light-purple), var(--dark-purple));
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Hanken Grotesk', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card {
+    width: 800px;
+    height: 540px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: var(--White);
+    border-radius: 30px;
+    box-shadow: 10px 15px 10px 10px #f3f6ff;
+}
+
+
+.card__container--result {
+    text-align: center;
+    background-image: var(--result-background-color);
+    border-radius: 30px;
+    flex: 50%;
+}
+
+.card__text {
+    margin-top: 40px;
+    color: #ccc3ff;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.card__group--score {
+    margin-top: 40px;
+    position: relative;
+    background-image: var(--score-background-color);
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+}
+
+.card__score {
+    position: absolute;
+    color: white;
+    font-size: 80px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    margin-top: 64px;
+    font-weight: 600;
+}
+
+.card__denom {
+    position: absolute;
+    color: #8c7eff;
+    right: 0;
+    left: 0;
+    margin: auto;
+    margin-top: 150px;
+}
+
+.card__result {
+    margin-top: 40px;
+    color: white;
+    font-weight: 560;
+}
+
+.card__paragraph {
+    color: #b9b8ff;
+    padding: 0 60px 0 60px;
+    font-size: 20px;
+}
+
+.card__container--summary {
+    flex: 50%;
+}
+
+.card__title {
+    display: block;
+    margin-top: 50px;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    left: 0;
+    right: 0;
+    margin-bottom: 30px;
+}
+
+.card__wrapper {
+    position: relative;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 400;
+}
+
+
+.card__wrapper--reaction {
+    background-color: #fff6f5;
+}
+
+.card__wrapper--reaction::before {
+    position: absolute;
+    font-family: var(--fa-style-family-classic);
+    font-weight: 900;
+    content: "\f0e7";
+    color: #cf7074;
+}
+
+
+.card__title--reaction {
+    color: #cf7074;
+    margin-left: 25px;
+}
+
+.card__wrapper--memory {
+    background-color: #fffbf2;
+}
+
+.card__title--memory {
+    color: #ffd05e;
+    margin-left: 25px;
+
+}
+
+.card__wrapper--memory::before {
+    position: absolute;
+    font-family: var(--fa-style-family-classic);
+    font-weight: 900;
+    content: "\f5dc";
+    color: #ffd05e;
+}
+
+.card__wrapper--verbal {
+    background-color: #f2fbfa;
+}
+
+.card__title--verbal {
+    color: #3aa184;
+    margin-left: 25px;
+}
+
+.card__wrapper--verbal::before {
+    position: absolute;
+    font-family: var(--fa-style-family-classic);
+    font-weight: 900;
+    content: "\f4ad";
+    color: #3aa184;
+}
+
+.card__wrapper--visual {
+    background-color: #f3f2ff;
+}
+
+.card__title--visual {
+    color: #20299e;
+    margin-left: 25px;
+}
+
+.card__wrapper--visual::before {
+    position: absolute;
+    font-family: var(--fa-style-family-classic);
+    font-weight: 900;
+    content: "\f06e";
+    color: #20299e;
+}
+
+.card__button {
+    display: block;
+    width: 70%;
+    color: white;
+    font-weight: 600;
+    margin: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: #303b59;
+    border-radius: 20px;
+    margin-top: 30px;
+    padding: 14px;
+}
+
+.--gray {
+    color: gray;
+}
+
+@media (max-width: 800px) {
+
+    .card__container--result,
+    .card__container--summary {
+        flex: 100%;
+    }
+
+    .card {
+        height: fit-content;
+        width: 70%;
+    }
+
+    .card__container--result {
+        border-radius: 0 0 30px 30px;
+    }
+}
+
+@media (max-width: 400px) {
+    .card__wrapper {
+        gap: 15px;
+        flex-direction: column;
+    }
+}

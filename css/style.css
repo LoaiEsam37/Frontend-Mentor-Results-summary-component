@@ -229,6 +229,10 @@ body {
         border-radius: 0 0 30px 30px;
         padding-bottom: 30px;
     }
+
+    .card__container--summary {
+        padding-bottom: 50px;
+    }
 }
 
 @media (max-width: 400px) {
